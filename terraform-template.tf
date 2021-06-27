@@ -73,3 +73,4 @@ resource "azurerm_subnet" "aml_subnet" {
       actions = ["Microsoft.Network/virtualNetworks/subnets/action"]
     }
   }
+}
