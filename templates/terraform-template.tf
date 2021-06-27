@@ -26,7 +26,7 @@ resource "azurerm_application_insights" "AppsInsight" {
 }
 
 resource "azurerm_key_vault" "KV" {
-  name                = "rl-kv-01"
+  name                = "rl-kv-1"
   location            = azurerm_resource_group.RG.location
   resource_group_name = azurerm_resource_group.RG.name
   tenant_id           = data.azurerm_client_config.current.tenant_id
@@ -34,7 +34,7 @@ resource "azurerm_key_vault" "KV" {
 }
 
 resource "azurerm_storage_account" "StorageAccount" {
-  name                     = "rlstorageacct01"
+  name                     = "rl-storageacct-1"
   location                 = azurerm_resource_group.RG.location
   resource_group_name      = azurerm_resource_group.RG.name
   account_tier             = "Standard"
@@ -42,7 +42,7 @@ resource "azurerm_storage_account" "StorageAccount" {
 }
 
 resource "azurerm_machine_learning_workspace" "example" {
-  name                    = "rl-mlws-01"
+  name                    = "rl-mlws-1"
   location                = azurerm_resource_group.RG.location
   resource_group_name     = azurerm_resource_group.RG.name
   application_insights_id = azurerm_application_insights.AppsInsight.id
@@ -55,14 +55,14 @@ resource "azurerm_machine_learning_workspace" "example" {
 }
 
 resource "azurerm_virtual_network" "aml_vnet" {
-  name                = "rl-mlws-vnet-01"
+  name                = "rl-mlws-vnet-1"
   location            = azurerm_resource_group.RG.location
   resource_group_name = azurerm_resource_group.RG.name
   address_space       = ["10.1.0.0/24"]
 }
 
 resource "azurerm_subnet" "aml_subnet" {
-  name                 = "rl-aml-subnet"
+  name                 = "rl-aml-subnet-1"
   resource_group_name  = azurerm_resource_group.RG.name
   virtual_network_name = azurerm_virtual_network.aml_vnet.name
   address_prefixes     = ["10.1.0.0/28"]
