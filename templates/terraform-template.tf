@@ -34,7 +34,7 @@ resource "azurerm_key_vault" "KV" {
 }
 
 resource "azurerm_storage_account" "StorageAccount" {
-  name                     = "rl-storageacct-1"
+  name                     = "rlstorageacctount1"
   location                 = azurerm_resource_group.RG.location
   resource_group_name      = azurerm_resource_group.RG.name
   account_tier             = "Standard"
