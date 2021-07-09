@@ -1,7 +1,7 @@
 # Introduction 
 This repo includes the Terraform templates for Azure resource deployment. They can be easily deployed via CI/CD pipelines in Azure DevOps. 
 
-The deployment include the creation of:
+The deployment includes the creation of:
 - Resource Group (where all the following resources will be stored in)
 - Virtual Network (including subnets)
 - Application Insights 
@@ -9,12 +9,10 @@ The deployment include the creation of:
 - Storage Account 
 - Machine Learning Workspace 
 
-# Getting Started
-TODO: Guide users through getting your code up and running on their own system. In this section you can talk about:
-1.	Installation process
-2.	Software dependencies
-3.	Latest releases
-4.	API references
+# Getting Started and Test it Yourself
+You will need an Azure subscription and access to Azure DevOps to complete this deployment. 
+
+I have recorded a step by step tutorial to guide you through (link will be uploaded soon).
 
 # Further Learning Resources 
 Check out the learning resources below if you want to learn more about Infrastructure as Code on Azure 
